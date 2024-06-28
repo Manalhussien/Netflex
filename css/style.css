@@ -1,0 +1,362 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:rgba(229, 9, 20, 0.982);
+    --second-color:#fff;
+    --body-color:black;
+    --margin-color:rgb(45,45,45);
+    --hover-color:rgb(125, 9, 15);
+}
+body{
+    background-color: var(--body-color);
+}
+ul{
+   list-style: none;
+}
+a{
+    color: var(--second-color);
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+header , .sec1 , .sec2 , .sec3 , .sec4 , .sec5{
+border-bottom:  10px solid var(--margin-color);
+}
+button{
+    cursor: pointer;
+}
+/************************************ start header ****************************************/
+header nav{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2rem .5rem 0rem  ;
+    position: absolute;
+    left: 10%;
+    z-index: 99;
+}
+header nav .nav-logo h1{
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 2.2rem ;
+}
+header nav .nav-buttons{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav .nav-buttons .first-btn ,footer .container .dropdown .first-btn{ 
+     padding: .5rem;
+     border: 1px solid var(--second-color);
+     background-color: transparent;
+     color: var(--second-color);
+     border-radius:7px ;
+     -webkit-border-radius:7px ;
+     -moz-border-radius:7px ;
+     -ms-border-radius:7px ;
+     -o-border-radius:7px ;
+     font-weight: bold;
+     font-size: 1rem;
+}
+header nav .nav-buttons .dropdown , footer .container .dropdown{
+    position: relative;
+}
+header nav .nav-buttons .dropdown .drop-list { 
+    width: 90%;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    text-align: center;
+    background-color: #eee;
+    display: none;
+}
+header nav .nav-buttons .dropdown .drop-list ul li , footer .container .dropdown .drop-list ul li{
+    border-bottom: 1px solid #ccc;
+    padding:.4rem 0rem ;
+}
+header nav .nav-buttons .dropdown .drop-list ul li:hover , footer .container .dropdown .drop-list ul li:hover{
+    color: var(--second-color);
+    background-color: #403939;
+}
+header nav .nav-buttons .dropdown:hover .drop-list ,  footer .container .dropdown:hover .drop-list{
+    display: block;
+}
+header nav .sign button{
+    padding: .5rem .9rem;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+header nav .sign button:hover , header .head-content button:hover , .sec5 .container .sec5-last button:hover{
+    background-color:var(--hover-color) ;
+    border: 1px solid var(--hover-color);
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/backgrond.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+header .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+}
+header .head-content{
+     position: absolute;
+     z-index: 2;
+     top: 50%;
+     left: 50%;
+     transform:translate(-50%, -50%) ;
+     -webkit-transform:translate(-50%, -50%) ;
+     -moz-transform:translate(-50%, -50%) ;
+     -ms-transform:translate(-50%, -50%) ;
+     -o-transform:translate(-50%, -50%) ;
+     padding: 1.4rem;
+     text-align: center;
+     color: var(--second-color);
+}
+header .head-content h2{
+    font-size: 2.5rem;
+}
+header .head-content p{
+font-size: 1.1rem;
+}
+header .head-content input {
+ width: 55%;
+ padding:1.2rem .7rem;
+ border: 1px solid #a29c9c;
+ background-color: rgba(0, 0, 0, 0.613);
+ border-radius: 3px;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -ms-border-radius: 3px;
+ -o-border-radius: 3px;
+}
+header .head-content input:focus {
+    outline: none;
+    border: 1px solid transparent;
+}
+header .head-content input::placeholder , .sec5 .container .sec5-last input::placeholder{
+    color: var(--second-color);
+}
+header .head-content button ,.sec5 .container .sec5-last button{
+    padding: .8rem .9rem  ;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+header .head-content h2 , header .head-content p{
+    margin-bottom: .9rem;
+}
+/************************************ end header ****************************************/
+/************************************ start section1 + section2 + section3 + section4 ****************************************/
+.sec1 , .sec2 , .sec3 , .sec4 , .sec5{
+    margin: .8rem 0rem;
+    padding: 2rem .5rem;
+}
+.sec1 .sec1-content , .sec2 .sec2-content , .sec3 .sec3-content , .sec4 .sec4-content{
+    color: var(--second-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: teal; */
+}
+.sec1 .sec1-content .sec1-item , .sec3 .sec3-content .sec3-item , .sec4 .sec4-content .sec4-item{
+    width: 50%;
+}
+.sec1 .sec1-content .sec1-item h3 , .sec2 .sec2-content .sec2-item h3 , .sec3 .sec3-content .sec3-item h3 , .sec4 .sec4-content .sec4-item h3{
+    font-size: 3.2rem;
+    margin-bottom: 1.3rem;    
+}
+.sec1 .sec1-content .sec1-item p , .sec2 .sec2-content .sec2-item p , .sec3 .sec3-content .sec3-item p , .sec4 .sec4-content .sec4-item p{
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+.sec1 .sec1-content .sec1-image, .sec2 .sec2-content .sec2-image , .sec3 .sec3-content .sec3-image , .sec4 .sec4-content .sec4-image{
+    width: 40%;
+    text-align: center;
+}
+.sec1 .sec1-content .sec1-image .sec1-img-item , .sec3 .sec3-content .sec3-image .sec3-img-item{
+    position: relative;
+}
+.sec1 .sec1-content .sec1-image .sec1-img-item img ,.sec2 .sec2-content .sec2-image img, .sec3 .sec3-content .sec3-image .sec3-img-item img , .sec4 .sec4-content .sec4-image img{
+    width: 100%;
+}
+.sec1 .sec1-content .sec1-image .sec1-img-item .sec1-video {
+   width: 100%;
+   height:100%;
+   max-width: 73%;
+    max-height: 54%;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    z-index: -1; 
+    overflow: hidden;
+}
+/************************************ end section1 + section2 +section3 + section4 ****************************************/
+/************************************ start section2 ****************************************/
+.sec2 .sec2-image{
+    position: relative;
+}
+.sec2 .sec2-image .img-div{
+    position: absolute;
+    height: 20%;
+    width: 50%;
+    top: 73%;
+    left:25%;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #a29c9c;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.sec2 .sec2-image .img-div img{
+    width: 20%;
+}
+.sec2 .sec2-image .img-div .inner-div h5{
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+.sec2 .sec2-image .img-div .inner-div span{
+    color: rgb(4, 4, 203);
+}
+/************************************ end section2 ****************************************/
+/************************************ start section3 ****************************************/
+.sec3 .sec3-content .sec3-image .sec3-img-item .sec3-video {
+    width: 100%;
+    height:100%;
+    max-width: 60%;
+     max-height: 54%;
+     position: absolute;
+     top: 7%;
+     left: 19%;
+     z-index: -1; 
+     overflow: hidden;
+}
+/************************************ end section3 ****************************************/
+/************************************ start section5 ****************************************/
+.sec5 .container .sec5-head{
+    text-align: center;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.sec5 .container .sec5-head h4{
+    color: var(--second-color);
+    font-size: 3rem;
+}
+.sec5 .container .sec5-content .sec5-item{
+    width: 90%;
+    margin: auto;
+    background-color: #403939;
+    color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+.sec5 .container .sec5-content .sec5-item p{
+ font-size: 1.5rem;
+}
+.sec5 .container .sec5-content .sec5-item i {
+    font-size: 1.7rem;
+}
+.sec5 .container .sec5-last{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.sec5 .container .sec5-last p{
+    color: var(--second-color);
+    font-size: 1.2rem;
+    margin: 2rem 0rem 1.2rem ;
+}
+.sec5 .container .sec5-last button{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+.sec5 .container .sec5-last input{
+    width: 40%;
+    padding:1.2rem .7rem;
+    border: 1px solid #a29c9c;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+/************************************ end section5 ****************************************/
+/************************************ start footer ****************************************/
+footer{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem;
+}
+footer .footer-box{
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-box .footer-item{
+    width: 24%;
+    line-height: 1.8;
+}
+footer .container .dropdown{
+    margin-top: 1.2rem;
+}
+footer .container .dropdown .drop-list{
+    width: 8%;
+    position: absolute;
+    top: 100%;
+    left: 0.5%;
+    text-align: center;
+    background-color: #eee;
+    display: none;
+}
+/************************************ end footer ****************************************/
